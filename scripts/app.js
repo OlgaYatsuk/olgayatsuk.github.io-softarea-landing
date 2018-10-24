@@ -13660,14 +13660,11 @@ var Modal = function Modal() {
 
   var $modalWindow = jquery$1('.js-order-modal');
   var $orderBtn = jquery$1('.js-order-btn');
-  var $policyBlock = jquery$1('.js-cookie');
-  var $policyBlockBtn = jquery$1('.js-cookie-btn');
 
   init();
 
   function init() {
     $orderBtn.on('click', showModal);
-    $policyBlockBtn.on('click', hideBlock);
     jquery$1(document).on('mouseup', hideModal);
   }
 
@@ -13681,13 +13678,37 @@ var Modal = function Modal() {
       $modalWindow.removeClass('is-shown');
     }
   }
+};
+
+var Policy = function Policy() {
+
+  var $policyWindow = jquery$1('.js-cookie');
+  var $policySubmit = jquery$1('.js-cookie-btn');
+
+  init();
+
+  function init() {
+    $policySubmit.on('click', hideBlock);
+    if ($policyWindow) {
+      $policySubmit.on('click', checkStateCookies);
+    }
+  }
 
   function hideBlock() {
-    $policyBlock.fadeOut();
+    $policyWindow.fadeOut();
+  }
+
+  function checkStateCookies() {
+    Cookies.set('value', 'true');
+  }
+
+  if (Cookies.get('value') != 'true') {
+    $policyWindow.show();
   }
 };
 
 Scroll();
+Policy();
 Language();
 Modal();
 //# sourceMappingURL=app.js.map
