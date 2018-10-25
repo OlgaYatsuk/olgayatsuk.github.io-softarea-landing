@@ -13535,7 +13535,7 @@ var Slider = function () {
 
     var defaultConfig = {
       autoplaySpeed: 4000,
-      // autoplay: true,
+      autoplay: true,
       pauseOnHover: false,
       slidesToShow: 1,
       slidesToScroll: 1,
