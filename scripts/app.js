@@ -13704,8 +13704,6 @@ var Policy = function Policy() {
 
   if (Cookies.get('value') != 'true') {
     $policyWindow.show();
-  } else {
-    $policyWindow.hide();
   }
 };
 
