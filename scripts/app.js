@@ -13622,12 +13622,12 @@ sliders.filter(function (slider) {
 var Scroll = function Scroll() {
   var $root = jquery$1('body,html');
   var $menu = jquery$1('.js-nav');
-  var $order = jquery$1('.header-options');
+  var $order = jquery$1('.js-order');
 
   init();
 
   function init() {
-    $order.on('click', 'a', scrollToBlock);
+    $order.on('click', scrollToBlock);
     $menu.on('click', 'a', scrollToBlock);
   }
 
