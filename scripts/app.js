@@ -13710,10 +13710,12 @@ var Policy = function Policy() {
 var Burger = function Burger() {
   var $burger = jquery$1('.js-burger');
   var $burgerBtn = jquery$1('.js-burger-btn');
+  var $burgerLink = jquery$1('.js-burger-link');
   var $close = jquery$1('.js-close');
 
   $burgerBtn.on('click', showBurger);
   $close.on('click', hideBurger);
+  $burgerLink.on('click', hideBurger);
 
   function showBurger() {
     $burger.slideDown('is-open');
