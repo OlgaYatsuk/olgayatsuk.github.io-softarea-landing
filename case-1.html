@@ -22,26 +22,46 @@
 
 <!--begin header-->
 <div class="header-wrapper">
-  <header class="header container">
-    <a href="index.html" class="logo"><img src="images/logo.svg" alt="softarea" class="logo"></a>
-    <nav class="navigation">
-      <a href="index.html#services" class="navigation__link">Services</a>
-      <a href="index.html#portfolio" class="navigation__link">Portfolio</a>
-      <a href="index.html#order" class="navigation__link">Order Pilot</a>
-      <a href="index.html#contacts" class="navigation__link">Contact</a>
+  <div class="container">
+    <a href="/" class="logo"><img src="images/logo.svg" alt="softarea" class="logo"></a>
+    <header class="header">
+      <nav class="navigation js-nav">
+        <a href="#services" class="navigation__link">Services</a>
+        <a href="#portfolio" class="navigation__link">Portfolio</a>
+        <a href="#order" class="navigation__link">Order Pilot</a>
+        <a href="#contacts" class="navigation__link">Contact</a>
+      </nav>
+      <div class="header-options ">
+        <a href="#order" class="order-link button button--green js-order">Order now</a>
+        <div class="language button js-lang">Nor<img src="images/icons/arrow-dropdown.svg" alt="more" class="js-arrow">
+          <p class="is-hidden js-lang-hidden">
+            <a href="#" class="language__option "> Eng</a>
+          </p>
+        </div>
+      </div>
+    </header>
+  </div>
+  <button class="burger-btn js-burger-btn"><img src="images/burger.svg" class="burger-button" alt="menu"></button>
+  <div class="burger js-burger">
+    <nav class="navigation js-nav">
+      <a href="#services" class="navigation__link">Services</a>
+      <a href="#portfolio" class="navigation__link">Portfolio</a>
+      <a href="#order" class="navigation__link">Order Pilot</a>
+      <a href="#contacts" class="navigation__link">Contact</a>
     </nav>
-    <div class="header-options">
-      <a href="#" class="order-link button button--green">Order now</a>
-      <ul class="language js-lang">
-        <li class="button"> Norway <img src="images/icons/arrow-dropdown.svg" alt="more" class="js-arrow">
-          <ul class="is-hidden js-lang-hidden">
-            <li class="language__option "> English
-          </ul>
-      </ul>
+    <div class="header-options ">
+      <button class="js-close burger-close"><img src="images/close.svg" alt="close"></button>
+      <a href="#order" class="order-link button button--green js-order">Order now</a>
+      <div class="language button js-lang">Nor<img src="images/icons/arrow-dropdown.svg" alt="more" class="js-arrow">
+        <p class="is-hidden js-lang-hidden">
+          <a href="#" class="language__option "> Eng</a>
+        </p>
+      </div>
     </div>
-  </header>
+  </div>
 </div>
 <!--end header-->
+
 
 <main class="single-case container">
   <section class="case-info">

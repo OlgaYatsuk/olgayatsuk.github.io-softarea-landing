@@ -13707,8 +13707,26 @@ var Policy = function Policy() {
   }
 };
 
+var Burger = function Burger() {
+  var $burger = jquery$1('.js-burger');
+  var $burgerBtn = jquery$1('.js-burger-btn');
+  var $close = jquery$1('.js-close');
+
+  $burgerBtn.on('click', showBurger);
+  $close.on('click', hideBurger);
+
+  function showBurger() {
+    $burger.slideDown('is-open');
+  }
+
+  function hideBurger() {
+    $burger.slideUp();
+  }
+};
+
 Scroll();
 Policy();
 Language();
+Burger();
 Modal();
 //# sourceMappingURL=app.js.map
