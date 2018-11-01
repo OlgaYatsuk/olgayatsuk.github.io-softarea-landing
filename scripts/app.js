@@ -13726,9 +13726,32 @@ var Burger = function Burger() {
   }
 };
 
+var Header = function Header() {
+  var $header = jquery$1('.header-wrapper');
+
+  function init() {
+    jquery$1(window).on('scroll', addBackground);
+  }
+
+  init();
+
+  function addBackground() {
+    var $scrolled = window.pageYOffset;
+
+    if ($scrolled > 100) {
+      $header.addClass('is-colored');
+    } else {
+      $header.removeClass('is-colored');
+    }
+
+    console.log($scrolled);
+  }
+};
+
 Scroll();
 Policy();
 Language();
 Burger();
 Modal();
+Header();
 //# sourceMappingURL=app.js.map
